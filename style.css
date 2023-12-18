@@ -6,15 +6,16 @@
 
 .contenedor {
   display: flex;
+  flex-direction: column;
   width: 80%;
-  height: 60vh;
+  height: 80vh;
   gap: 0.5rem;
   margin: 10vh auto;
 }
 
 .card {
   position: relative;
-  width: 0;
+  height: 0;
   flex-grow: 1;
   border-radius: 0.8rem;
   cursor: crosshair;
@@ -49,7 +50,7 @@
   color: #000;
   opacity: 0;
   overflow: hidden;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   transition: opacity 500ms ease;
   text-align: center;
 }
@@ -70,4 +71,16 @@
 
 .card:hover .card__img {
   opacity: 0.5;
+}
+
+@media screen and (width > 800px){
+  .contenedor{
+    flex-direction: row;
+    height: 60vh;
+  }
+  
+  .card{
+    width: 0;
+    height: auto;
+  }
 }
